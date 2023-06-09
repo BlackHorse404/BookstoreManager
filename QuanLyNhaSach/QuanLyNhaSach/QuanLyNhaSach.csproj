@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00321EE6-FCAC-4281-AD5D-6D1345862C72}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyNhaSach</RootNamespace>
+    <AssemblyName>QuanLyNhaSach</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Views\FrmHelp_ChuThichDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmHelp_ChuThichDoanhThu.Designer.cs">
+      <DependentUpon>FrmHelp_ChuThichDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddMemberCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddMemberCard.Designer.cs">
+      <DependentUpon>AddMemberCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddNewAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddNewAccount.Designer.cs">
+      <DependentUpon>AddNewAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddNewBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddNewBook.Designer.cs">
+      <DependentUpon>AddNewBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddNewNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddNewNhanVien.Designer.cs">
+      <DependentUpon>AddNewNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bussiness\BookstoreBussiness.cs" />
+    <Compile Include="Bill1.cs">
+      <DependentUpon>Bill1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Bill2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bill2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\DeleteMemberCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeleteMemberCard.Designer.cs">
+      <DependentUpon>DeleteMemberCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditListPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditListPhieuNhap.Designer.cs">
+      <DependentUpon>EditListPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditMemberCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditMemberCard.Designer.cs">
+      <DependentUpon>EditMemberCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetailsPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DetailsPhieuNhap.Designer.cs">
+      <DependentUpon>DetailsPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmReportPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmReportPhieuNhap.Designer.cs">
+      <DependentUpon>FrmReportPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CTHOADON.cs" />
+    <Compile Include="Models\HoaDon.cs" />
+    <Compile Include="Models\KhachHang.cs" />
+    <Compile Include="Models\MemberCard.cs" />
+    <Compile Include="rptDoanhThu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDoanhThu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ConnectDB.cs" />
+    <Compile Include="DataAccess\DBConfig.cs" />
+    <Compile Include="Views\DeleteBookConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeleteBookConfirm.Designer.cs">
+      <DependentUpon>DeleteBookConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetailsBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DetailsBook.Designer.cs">
+      <DependentUpon>DetailsBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditAccount.Designer.cs">
+      <DependentUpon>EditAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditBookInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditBookInfo.Designer.cs">
+      <DependentUpon>EditBookInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditNhanVien.Designer.cs">
+      <DependentUpon>EditNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Ultilities.cs" />
+    <Compile Include="Views\FindBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FindBook.Designer.cs">
+      <DependentUpon>FindBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmReportDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmReportDoanhThu.Designer.cs">
+      <DependentUpon>FrmReportDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ListAccount.Designer.cs">
+      <DependentUpon>ListAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ListBook.Designer.cs">
+      <DependentUpon>ListBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListMemberCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ListMemberCard.Designer.cs">
+      <DependentUpon>ListMemberCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ListPhieuNhap.Designer.cs">
+      <DependentUpon>ListPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoadDataProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoadDataProgress.Designer.cs">
+      <DependentUpon>LoadDataProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\BookDetails_Model.cs" />
+    <Compile Include="Models\CTPhieuNhap.cs" />
+    <Compile Include="Models\NhanVien.cs" />
+    <Compile Include="Models\NhaXuatBan.cs" />
+    <Compile Include="Models\PhieuNhap.cs" />
+    <Compile Include="Models\ProcessReport.cs" />
+    <Compile Include="Models\Sach.cs" />
+    <Compile Include="Models\TacGia.cs" />
+    <Compile Include="Models\TheLoai.cs" />
+    <Compile Include="Models\ThongTinSach.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\QLDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QLDoanhThu.Designer.cs">
+      <DependentUpon>QLDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptPhieuNhap.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPhieuNhap.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ThanhToan.Designer.cs">
+      <DependentUpon>ThanhToan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\FrmHelp_ChuThichDoanhThu.resx">
+      <DependentUpon>FrmHelp_ChuThichDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddMemberCard.resx">
+      <DependentUpon>AddMemberCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddNewAccount.resx">
+      <DependentUpon>AddNewAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddNewBook.resx">
+      <DependentUpon>AddNewBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddNewNhanVien.resx">
+      <DependentUpon>AddNewNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bill1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Bill1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bill2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Bill2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeleteMemberCard.resx">
+      <DependentUpon>DeleteMemberCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditListPhieuNhap.resx">
+      <DependentUpon>EditListPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditMemberCard.resx">
+      <DependentUpon>EditMemberCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DetailsPhieuNhap.resx">
+      <DependentUpon>DetailsPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmReportPhieuNhap.resx">
+      <DependentUpon>FrmReportPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDoanhThu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDoanhThu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeleteBookConfirm.resx">
+      <DependentUpon>DeleteBookConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DetailsBook.resx">
+      <DependentUpon>DetailsBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditAccount.resx">
+      <DependentUpon>EditAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditBookInfo.resx">
+      <DependentUpon>EditBookInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditNhanVien.resx">
+      <DependentUpon>EditNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FindBook.resx">
+      <DependentUpon>FindBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmReportDoanhThu.resx">
+      <DependentUpon>FrmReportDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ListAccount.resx">
+      <DependentUpon>ListAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ListBook.resx">
+      <DependentUpon>ListBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ListMemberCard.resx">
+      <DependentUpon>ListMemberCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ListPhieuNhap.resx">
+      <DependentUpon>ListPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoadDataProgress.resx">
+      <DependentUpon>LoadDataProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\QLDoanhThu.resx">
+      <DependentUpon>QLDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPhieuNhap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPhieuNhap.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ThanhToan.resx">
+      <DependentUpon>ThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AnhBia\System.Windows.Forms.Label, Text" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AnhBia\1-01.jpg" />
+    <Content Include="AnhBia\BTSBieuTuongKpop.jpg" />
+    <Content Include="AnhBia\ChaMeDocHai.jpg" />
+    <Content Include="AnhBia\ChienThuatCoTuong.jpg" />
+    <Content Include="AnhBia\ChoToiXinMotVeDiTuoiTho.jpg" />
+    <Content Include="AnhBia\ChuyenConMeoDayHaiAuBay.jpg" />
+    <Content Include="AnhBia\CleanCode.jpg" />
+    <Content Include="AnhBia\ConDuongCuaRealMadrid.jpg" />
+    <Content Include="AnhBia\CoVay.jpg" />
+    <Content Include="AnhBia\DacNhanTam.jpg" />
+    <Content Include="AnhBia\DauAnRoto.jpg" />
+    <Content Include="AnhBia\DiRaBienLon.jpg" />
+    <Content Include="AnhBia\DoiNganDungNguDai.jpg" />
+    <Content Include="AnhBia\GiacTinhConNguoi.jpg" />
+    <Content Include="AnhBia\Graphics#1.jpg" />
+    <Content Include="AnhBia\HackerIeltsListening.jpg" />
+    <Content Include="AnhBia\HackerIeltsReading.jpg" />
+    <Content Include="AnhBia\HackerIeltsSpeaking.jpg" />
+    <Content Include="AnhBia\HackerIeltsWriting.jpg" />
+    <Content Include="AnhBia\HoaHocTro1393.jpg" />
+    <Content Include="AnhBia\HoaHocTro1394.jpg" />
+    <Content Include="AnhBia\HoaHocTro1395.jpg" />
+    <Content Include="AnhBia\HoangTuBe.jpg" />
+    <Content Include="AnhBia\HomiDeus-LuocSuThoiGian.jpg" />
+    <Content Include="AnhBia\image.png" />
+    <Content Include="AnhBia\JOY-LapLap.jpg" />
+    <Content Include="AnhBia\JOY-NguoiKeChuyenTinh.jpg" />
+    <Content Include="AnhBia\KhongTuVoiLuanNgu.jpg" />
+    <Content Include="AnhBia\LamDieuQuanTrong.jpg" />
+    <Content Include="AnhBia\LatMatDanOng.jpg" />
+    <Content Include="AnhBia\MocLenSoi.jpg" />
+    <Content Include="AnhBia\MotNghienCuuVeGiacTinhConNguoi.jpg" />
+    <Content Include="AnhBia\MotNguoiVietTramLang.jpg" />
+    <Content Include="AnhBia\NghiGiauLamGiau.jpg" />
+    <Content Include="AnhBia\NguoiBaTaiGioiVungSaga.jpg" />
+    <Content Include="AnhBia\NhaGiaKim.jpg" />
+    <Content Include="AnhBia\NhaNuocKhoiTao.jpg" />
+    <Content Include="AnhBia\NhatKyTarot.jpg" />
+    <Content Include="AnhBia\NhungTuNhanCuaDiaLy.jpg" />
+    <Content Include="AnhBia\NoiSaoChoTreNgheLoi.jpg" />
+    <Content Include="AnhBia\PhongThuyTrongNhanDuyen.jpg" />
+    <Content Include="AnhBia\PhuongPhapHocGuitar.jpg" />
+    <Content Include="AnhBia\SaoChungTaLaiNgu.jpg" />
+    <Content Include="AnhBia\ShinzoAbeVaGiaToc.jpg" />
+    <Content Include="AnhBia\SpyXFamily.jpg" />
+    <Content Include="AnhBia\ThienSuVaEmBe5Tuoi.jpg" />
+    <Content Include="AnhBia\ThienTuVan.jpg" />
+    <Content Include="AnhBia\TiengNhatChoMoiNguoi.jpg" />
+    <Content Include="AnhBia\TuHocCachMay.jpg" />
+    <Content Include="AnhBia\TuHocNhacLyCoBan.jpg" />
+    <Content Include="AnhBia\TuLamDep.jpg" />
+    <Content Include="AnhBia\UngThuKhongPhaiLaChet.jpg" />
+    <Content Include="Resources\add.png" />
+    <Content Include="Resources\dashboardpng.png" />
+    <Content Include="Resources\label2.Image.png" />
+    <Content Include="Resources\logoBookStore.png" />
+    <Content Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
